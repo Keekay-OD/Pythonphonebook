@@ -3,6 +3,6 @@ class new():
         self.n = input('Enter First Name: ')
         self.l = input('Enter Last Name: ')
         self.p = input('Enter Phone #: ')
-        print(self.n,self.l, 'saved succesfully')
+        print(self.n,self.l, 'Saved Succesfully')
         
 
