@@ -4,5 +4,5 @@ class new():
         self.l = input('Enter Last Name: ')
         self.p = input('Enter Phone #: ')
         print(self.n,self.l, 'saved succesfully')
-        print ('goodbye!')
+        
 
