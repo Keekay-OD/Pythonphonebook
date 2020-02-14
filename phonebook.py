@@ -1,15 +1,14 @@
 from newcontact import new
-from welcome import welcome as menu
 from getname import * 
 from contact import *
 from database import Contact
 
+#Dictionary for saved entries
+address_book = []
 
-
+#Checks User Name
 getname()
-menu()
 
-print('What can i do for you today', name,'? ')
 
 
 def welcome():
@@ -19,7 +18,6 @@ def welcome():
     print('4. Edit Contact')
     print('5. Exit')
 
-    
     while True:
         try:
             choice = int(input('Enter [1-4] :'))
@@ -28,15 +26,19 @@ def welcome():
             print("Please enter a vaild number!")
     if choice == 1:
         new()
-        menu()
-        welcome()
-        
-        
     elif choice == 5 :
         print('You\'ve been successfully logged out')
         exit()
     else :
         print ('Features Locked: Please Wait for update')
+    welcome()
+
+
+
+
+        
+        
+        
     
 
 
