@@ -1,17 +1,13 @@
-from newcontact import new
 from getname import * 
 from contact import *
 from database import Contact
 from search import search
 import csv  
 import time
-#Dictionary for saved entries
-address_book = []
+from newcontact import new
 
 #Checks User Name
 getname()
-
-
 
 def welcome():
     print("1. Add a new Contact")
@@ -38,8 +34,7 @@ def welcome():
         
     elif choice == 4 :
         time.sleep(1)
-        print('Enter Contacts Name')
-        edit() 
+        print ('Features Locked: Please Wait for update')
 
         
         
