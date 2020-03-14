@@ -2,7 +2,9 @@ from newcontact import new
 from getname import * 
 from contact import *
 from database import Contact
-
+from search import search
+import csv  
+import time
 #Dictionary for saved entries
 address_book = []
 
@@ -20,16 +22,30 @@ def welcome():
 
     while True:
         try:
-            choice = int(input('Enter [1-4] :'))
+            choice = int(input('Enter [1-5] :'))
             break
         except ValueError:
             print("Please enter a vaild number!")
     if choice == 1:
         new()
     elif choice == 5 :
+        time.sleep(1)
         print('You\'ve been successfully logged out')
         exit()
+    elif choice == 2 :
+        time.sleep(1)
+        search() 
+        
+    elif choice == 4 :
+        time.sleep(1)
+        print('Enter Contacts Name')
+        edit() 
+
+        
+        
+           
     else :
+        time.sleep(1)
         print ('Features Locked: Please Wait for update')
     welcome()
 
