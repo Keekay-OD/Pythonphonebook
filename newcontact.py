@@ -25,7 +25,7 @@ class new():
         
         with open(csv_file, 'a') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-            writer.writeheader()
+            
             for data in address_book:
                     writer.writerow(data)
             

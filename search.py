@@ -3,23 +3,27 @@ import time
 from menu import menu
 import csv  
 from newcontact import * 
+import sys
+
+
 class search():
     def __init__(self):
-        
+        #input number you want to search
         self.firstname = input('Enter First Name: ').capitalize().strip()
         
-        
-        
-        csv_file = "memory.csv"
-        with open(csv_file, 'a') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-            writer.writeheader()
-            for data in address_book:
-                    writer.writerow(data)
+        #read csv, and split on "," the line
+        csv_file = csv.reader(open('memory.csv', "rU"), delimiter=",")
+        header1 = csv_file.next()
+        #loop through csv list
 
+        query = dict(csv_file)
+        for row in csv_file:
+        
+            if self.firstname == row[1]:
+                print (row)
+            else:
+                print('Name Not in Phonebook')
+                search()
         
         time.sleep(3)
-
-
-        
         menu()
