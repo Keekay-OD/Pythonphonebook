@@ -8,7 +8,7 @@ This is a python phonebook.
 3. Logging into different phonebooks via UserID
 
 ## Screenshots
-
+*adding a contact*
 ![Terminal Screenshot](/addcontact.png)
 
 
