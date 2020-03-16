@@ -1,4 +1,3 @@
-import pickle
 import time
 from menu import menu
 import csv  
@@ -11,19 +10,22 @@ class search():
         #input number you want to search
         self.firstname = input('Enter First Name: ').capitalize().strip()
         
-        #read csv, and split on "," the line
-        csv_file = csv.reader(open('memory.csv', "rU"), delimiter=",")
-        header1 = csv_file.next()
-        #loop through csv list
-
-        query = dict(csv_file)
-        for row in csv_file:
+       #csv_file = csv.reader(open('memory.csv', "rb"), delimiter=",")
         
-            if self.firstname == row[1]:
-                print (row)
-            else:
-                print('Name Not in Phonebook')
-                search()
+        with open('memory.csv', 'r') as f:
+           reader = csv.reader(f)
+           lines = list(reader)
+           for row in reader:
+                if self.firstname == input:
+                    print (lines)[1]
+                elif self.firstname == row[2]:
+                    print(" ".join(row[2]))
+                elif self.firstname == row[3]:
+                    print(" ".join(self))
+                
+                else:
+                    print('Name Not in Phonebook')
+                    search()
         
         time.sleep(3)
         menu()
