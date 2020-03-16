@@ -7,6 +7,11 @@ This is a python phonebook.
 2. Searching for Contacts via Email,Phone #, or Name 
 3. Logging into different phonebooks via UserID
 
+## Screenshots
+
+![Terminal Screenshot](/addcontact.png)
+
+
   
 ## Installation
 
