@@ -4,11 +4,12 @@ from database import Contact
 from search import search
 import csv  
 import time
+from menu import * 
 from newcontact import new
 
 #Checks User Name
 getname()
-
+menu()
 def welcome():
     print("1. Add a new Contact")
     print('2. Search Contact')

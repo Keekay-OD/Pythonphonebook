@@ -2,19 +2,20 @@ import pickle
 import time
 from menu import menu
 import csv  
+from newcontact import * 
 class search():
     def __init__(self):
-        address_book = []
-        #w = csv.writer(open("memory.csv", "w"))
-        self.firstname = input('Enter First Name: ').capitalize().strip()
-        self.lastname = input('Enter Last Name: ').capitalize().strip()
-        self.phone = input('Enter Phone #: ').strip()
-        self.email = input('Enter Email: ').strip().lower()
-        address_book.append({'name' : self.firstname, 'phone' : self.phone, 'adress' : self.email})
         
-
-        with open('memory.csv', 'w') as csvfile:
-            address_book = csv.reader(csvfile, delimiter='', quotechar='|')
+        self.firstname = input('Enter First Name: ').capitalize().strip()
+        
+        
+        
+        csv_file = "memory.csv"
+        with open(csv_file, 'a') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+            writer.writeheader()
+            for data in address_book:
+                    writer.writerow(data)
 
         
         time.sleep(3)
