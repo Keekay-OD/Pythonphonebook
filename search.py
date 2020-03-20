@@ -14,10 +14,8 @@ class search():
         for row in csv_file:
             if self.firstname == row[0]:
                 print (row)
-        else: 
-            print('Name not Found')
-            
+            else:
                 
-        
+                pass
         time.sleep(3)
         menu()
