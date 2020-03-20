@@ -32,17 +32,11 @@ def welcome():
     elif choice == 2 :
         time.sleep(1)
         search() 
-        
-    elif choice == 4 :
-        time.sleep(1)
-        print ('Features Locked: Please Wait for update')
-
-        
-        
-           
+      
     else :
         time.sleep(1)
         print ('Features Locked: Please Wait for update')
+        time.sleep(2)
     welcome()
 
 
