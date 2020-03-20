@@ -19,3 +19,6 @@ class search():
                 pass
         time.sleep(3)
         menu()
+
+
+        # have to add error handeling 
