@@ -2,6 +2,7 @@ from getname import *
 from contact import *
 from database import Contact
 from search import search
+from edit import *
 import csv  
 import time
 from menu import * 
@@ -32,11 +33,13 @@ def welcome():
     elif choice == 2 :
         time.sleep(1)
         search() 
-      
+    elif choice == 4 :
+        time.sleep(1)
+        edit()   
     else :
         time.sleep(1)
         print ('Features Locked: Please Wait for update')
-        time.sleep(2)
+        time.sleep(3)
     welcome()
 
 

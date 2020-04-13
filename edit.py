@@ -5,21 +5,16 @@ from newcontact import *
 import sys
 
 
-
-class search():
+class edit():
     def __init__(self):
-        #input number you want to search
-        self.firstname = input('Enter First Name: ').capitalize().strip()
+        self.firstname = input('Search by First Name: ').capitalize().strip()
         
         csv_file = csv.reader(open('memory.csv', "r"), delimiter=",")
         for row in csv_file:
             if self.firstname == row[0]:
                 print (row)
             else:
-                print('contact not found')
+                
                 pass
         time.sleep(3)
         menu()
-
-
-        # have to add error handeling 
